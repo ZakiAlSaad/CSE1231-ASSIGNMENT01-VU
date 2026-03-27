@@ -1,0 +1,25 @@
+//Find the sum of all constituent digit(s) of a taken integer number from keyboard
+// Created by Zaki Al Saad on 27/03/26
+#include <stdio.h>
+
+int main() {
+    int n,sum=0,remainder;
+
+    printf("Enter an integer: ");
+    scanf("%d",&n);
+
+    // Make the number positive if it's negative
+    if (n<0) {
+        n=-n;
+    }
+
+    while (n!=0) {
+        remainder=n%10;
+        sum+=remainder;
+        n/=10;
+    }
+
+    printf("Sum of digits =%d\n",sum);
+
+    return 0;
+}
